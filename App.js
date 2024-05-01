@@ -8,10 +8,13 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 
 import Details from "./components/Details";
 import DashBoard from "./components/DashBoard";
-
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
+import './App.css';
+import MemeCoin from "./components/MemeCoin";
 function App() {
   return (
-   <div>
+   <div className="App">
  <Router>
   <Routes>
   <Route element={<RegistrationPage/>} path={"/registration"}/>
@@ -22,10 +25,15 @@ function App() {
   <Route element={<AdminLogin/>} path={"/adminlogin"}/>
   <Route element={<Details/>} path={'/details'}/>
   <Route element={<DashBoard/>} path={'/dashboard/*'}/>
+  <Route element={<MemeCoin />} path={"/memecoin"}/>
+  
  
 
   </Routes>
   </Router>
+
+{/* <TaskInput />
+ <TaskList /> */}
    </div>
   );
 }
